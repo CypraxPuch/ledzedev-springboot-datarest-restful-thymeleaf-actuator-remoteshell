@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ejemplo RESTful viejito en MVC con Thymeleaf</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>ESTADO DE CUENTA</h1>
+
+<div th:each="cb : ${cuentas}">
+    <div>
+        <b th:text="${cb.id}">ID</b>
+        <span th:text="${cb.titularCuenta}">Titular de la cuenta</span>
+        <span th:text="${cb.saldoDisponible}">Saldo disponible</span>
+    </div>
+</div>
+
+</body>
+</html>
